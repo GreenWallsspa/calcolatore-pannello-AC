@@ -91,8 +91,8 @@ button {
 
 <script>
   // Tabella dati 
-  const datiBase64 = "eyJlcHMiOnsiNiI6NiwiNyI6NywiOCI6OCwiOSI6OSwiMTAiOjEwLCIxMSI6MTEsIjEyIjoxMiwiMTMiOjEzLCIxNCI6MTQsIjE1IjoxNSwiMTYiOjE2LCIxNyI6MTcsIjE4IjoxOCwiMTkiOjE5LCIyMCI6MjB9LCJsYW5hIjp7IjQiOjYsIjYiOjgsIjgiOjEwLCIxMCI6MTIsIjEyIjoxNH19";
-  const prezzi = JSON.parse(atob(datiBase64));
+  const blob = "eyJlcHMiOnsiNiI6NiwiNyI6NywiOCI6OCwiOSI6OSwiMTAiOjEwLCIxMSI6MTEsIjEyIjoxMiwiMTMiOjEzLCIxNCI6MTQsIjE1IjoxNSwiMTYiOjE2LCIxNyI6MTcsIjE4IjoxOCwiMTkiOjE5LCIyMCI6MjB9LCJsYW5hIjp7IjQiOjYsIjYiOjgsIjgiOjEwLCIxMCI6MTIsIjEyIjoxNH19";
+  const prezzi = JSON.parse(atob(blob));
 
   function clampToAllowed(id, allowedValues) {
     let v = Math.floor(Number(document.getElementById(id).value));
