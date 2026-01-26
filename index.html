@@ -45,7 +45,6 @@ select {
  text-align: center;
  }
 
-/* SOLO il select della densità: più stretto degli input */
 #densita {
   width: 60px;
   min-width: 60px;
@@ -129,7 +128,6 @@ button{font-weight:700;}
     let v = Math.floor(Number(document.getElementById(id).value));
     if (Number.isNaN(v)) v = allowedValues[0];
 
-    // Se non è un valore ammesso, lo porto al più vicino
     if (!allowedValues.includes(v)) {
       let closest = allowedValues[0];
       let best = Math.abs(v - closest);
