@@ -97,7 +97,7 @@ button{font-weight:700;}
  </select>
 </label>
 <label>Spessore EPS esterno (cm)
-    <input type="number" id="eps1" min="6" max="20" step="1" value="6">
+    <input type="number" id="eps1" min="4" max="25" step="1" value="4">
   </label>
 
   <label>Spessore Lana di roccia (cm)
@@ -105,7 +105,7 @@ button{font-weight:700;}
   </label>
 
   <label>Spessore EPS interno (cm)
-    <input type="number" id="eps2" min="6" max="20" step="1" value="6">
+    <input type="number" id="eps2" min="4" max="10" step="1" value="4">
   </label>
 
   <button id="btn" type="button">Calcola prezzo</button>
@@ -121,7 +121,7 @@ button{font-weight:700;}
 
 <script>
   // Tabella 
-  const blob = "eyJlcHMiOnsiNiI6eyJkMTUiOjYuMCwiZDMwIjo4LjR9LCI3Ijp7ImQxNSI6Ny4wLCJkMzAiOjkuOH0sIjgiOnsiZDE1Ijo4LjAsImQzMCI6MTEuMn0sIjkiOnsiZDE1Ijo5LjAsImQzMCI6MTIuNn0sIjEwIjp7ImQxNSI6MTAuMCwiZDMwIjoxNC4wfSwiMTEiOnsiZDE1IjoxMS4wLCJkMzAiOjE1LjR9LCIxMiI6eyJkMTUiOjEyLjAsImQzMCI6MTYuOH0sIjEzIjp7ImQxNSI6MTMuMCwiZDMwIjoxOC4yfSwiMTQiOnsiZDE1IjoxNC4wLCJkMzAiOjE5LjZ9LCIxNSI6eyJkMTUiOjE1LjAsImQzMCI6MjEuMH0sIjE2Ijp7ImQxNSI6MTYuMCwiZDMwIjoyMi40fSwiMTciOnsiZDE1IjoxNy4wLCJkMzAiOjIzLjh9LCIxOCI6eyJkMTUiOjE4LjAsImQzMCI6MjUuMn0sIjE5Ijp7ImQxNSI6MTkuMCwiZDMwIjoyNi42fSwiMjAiOnsiZDE1IjoyMC4wLCJkMzAiOjI4LjB9fSwibGFuYSI6eyI0Ijo2LCI2Ijo4LCI4IjoxMCwiMTAiOjEyLCIxMiI6MTR9fQ==";
+  const blob = "eyJlcHMiOiB7IjQiOiB7ImQxNSI6IDcuOTksICJkMzAiOiAxMi4zM30sICI1IjogeyJkMTUiOiA5LjEsICJkMzAiOiAxNC41Mn0sICI2IjogeyJkMTUiOiAxMC4yMiwgImQzMCI6IDE2LjcyfSwgIjciOiB7ImQxNSI6IDExLjMzLCAiZDMwIjogMTguOTF9LCAiOCI6IHsiZDE1IjogMTIuNDQsICJkMzAiOiAyMS4xMX0sICI5IjogeyJkMTUiOiAxMy41NSwgImQzMCI6IDIzLjMxfSwgIjEwIjogeyJkMTUiOiAxNC42NiwgImQzMCI6IDI1LjV9LCAiMTEiOiB7ImQxNSI6IDE1Ljc4LCAiZDMwIjogMjcuN30sICIxMiI6IHsiZDE1IjogMTYuODksICJkMzAiOiAyOS44OX0sICIxMyI6IHsiZDE1IjogMTguMCwgImQzMCI6IDMyLjA5fSwgIjE0IjogeyJkMTUiOiAxOS4xMSwgImQzMCI6IDM0LjI5fSwgIjE1IjogeyJkMTUiOiAyMC4yMiwgImQzMCI6IDM2LjQ4fSwgIjE2IjogeyJkMTUiOiAyMS4zNCwgImQzMCI6IDM4LjY4fSwgIjE3IjogeyJkMTUiOiAyMi40NSwgImQzMCI6IDQwLjg3fSwgIjE4IjogeyJkMTUiOiAyMy41NiwgImQzMCI6IDQzLjA3fSwgIjE5IjogeyJkMTUiOiAyNC42NywgImQzMCI6IDQ1LjI2fSwgIjIwIjogeyJkMTUiOiAyNS43OCwgImQzMCI6IDQ3LjQ2fSwgIjIxIjogeyJkMTUiOiAyNi44OSwgImQzMCI6IDQ5LjY1fSwgIjIyIjogeyJkMTUiOiAyOC4wMSwgImQzMCI6IDUxLjg1fSwgIjIzIjogeyJkMTUiOiAyOS4xMiwgImQzMCI6IDU0LjA0fSwgIjI0IjogeyJkMTUiOiAzMC4yMywgImQzMCI6IDU2LjI0fSwgIjI1IjogeyJkMTUiOiAzMS4zNCwgImQzMCI6IDU4LjQ0fX0sICJsYW5hIjogeyI0IjogNC43LCAiNiI6IDcuMDUsICI4IjogOS40MSwgIjEwIjogMTEuNzYsICIxMiI6IDE0LjExfX0=";
  const prezzi = JSON.parse(atob(blob));
 
   function clampToAllowed(id, allowedValues) {
